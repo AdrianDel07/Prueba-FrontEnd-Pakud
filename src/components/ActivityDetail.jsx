@@ -8,10 +8,10 @@ export default function ActivityDetail() {
     const[call, setCall] = useState([]);
 
     useEffect(() => {
-        getCallDetail();
+        getCallDetail(id);
     }, []);
 
-    const getCallDetail = async () => {
+    const getCallDetail = async (id) => {
         try {
             const response = await api.getActivityID(id);
             // console.log(response);
@@ -20,7 +20,7 @@ export default function ActivityDetail() {
         catch (err) {
             console.log(err);
         }
-    }
+    };
 
     return (
         <div className="box-container">
@@ -37,10 +37,8 @@ export default function ActivityDetail() {
             </div>
             <div className="call-box-history">
                 <div className="box-history">
-                    <span>
-                        <img  className={call.direction === 'inbound' ? 'recived-call' : 'outbound'} />
-                    </span>
-                    <div>
+                    <span className={call.direction === 'inbound' ? 'recived-call' : 'outbound'}></span>
+                    <div style={{margin: '10px', textAlign: 'initial'}}>
                         <p>{call.to}</p>
                         <p>Mobile</p>
                     </div>

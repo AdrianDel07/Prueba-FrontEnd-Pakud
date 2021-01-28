@@ -53,8 +53,7 @@ export default function ActivityFeed() {
 					<Link className="box-calls call" to={`/call/${call.id}`}>
 
 						<div style={{flexGrow: '1'}}>
-							<span>
-								<img className={call.call_type === 'answered' ? 'answered-call' : 'missed-call'} />
+							<span  className={call.call_type === 'answered' ? 'answered-call' : 'missed-call'} >
 							</span>
 						</div>
 						<div className="numphone-text" style={{flexGrow: '1'}}>
