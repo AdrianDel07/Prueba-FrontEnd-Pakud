@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useHistory, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import api from '../api.js';
 
 
@@ -14,7 +14,7 @@ export default function ActivityDetail() {
     const getCallDetail = async () => {
         try {
             const response = await api.getActivityID(id);
-            console.log(response);
+            // console.log(response);
             setCall(response);
         }
         catch (err) {
@@ -38,7 +38,7 @@ export default function ActivityDetail() {
             <div className="call-box-history">
                 <div className="box-history">
                     <span>
-                        <img className={call.direction === 'inbound' ? 'recived-call' : 'outbound'} />
+                        <img  className={call.direction === 'inbound' ? 'recived-call' : 'outbound'} />
                     </span>
                     <div>
                         <p>{call.to}</p>

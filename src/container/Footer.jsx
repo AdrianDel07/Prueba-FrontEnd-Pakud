@@ -13,7 +13,7 @@ function Footer() {
     const getAllData = async () => {
         const response = await api.getAllActivities();
         setData(response);
-        console.log(data);
+        // console.log(data);
     }
 
     return (

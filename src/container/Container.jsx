@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import ActivityFeed from '../components/ActivityFeed';
 import ActivityDetail from '../components/ActivityDetail';
 

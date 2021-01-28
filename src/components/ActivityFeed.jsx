@@ -1,15 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import api from '../api.js';
 import '../assets/sass/styles.scss';
-import receivedcall from '../assets/img/received-call.svg';
-import Header from '../container/Header';
-import Footer from '../container/Footer';
 import { Link } from "react-router-dom";
 
 
 export default function ActivityFeed() {
 	const[calls, setCalls] = useState([]);
-	
+
 	useEffect(() => {
 		getAllCalls();
 		getDate();
@@ -20,7 +17,7 @@ export default function ActivityFeed() {
 		try {
 			const response = await api.getAllActivities();
 			setCalls(response);
-			console.log(calls);
+			// console.log(calls);
 		}
 		catch (err) {
 			console.log(err);
@@ -28,7 +25,7 @@ export default function ActivityFeed() {
 	}
 	const getDate = (dat) => {
 		let date = new Date(dat).toDateString("en-US").split("/");
-		console.log(date);
+		// console.log(date);
 		return (date);
 	}
 
@@ -49,7 +46,7 @@ export default function ActivityFeed() {
 			</div>
 			
 			{ calls.map((call, index) => (
-				<div>
+				<div key={index}>
 					<div className="date-line">
 						<p>{getDate(call.created_at)}</p>
 					</div>

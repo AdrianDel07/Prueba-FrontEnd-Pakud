@@ -1,8 +1,7 @@
 import './App.css';
-import React, {useEffect} from 'react';
+import React from 'react';
 import { BrowserRouter as Router } from "react-router-dom";
 import Network from './components/Network';
-import ActivityFeed from './components/ActivityFeed';
 import Container from './container/Container';
 import Header from './container/Header';
 import Footer from './container/Footer';
