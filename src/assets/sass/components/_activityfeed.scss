@@ -1,0 +1,120 @@
+$color: #595959;
+$text2: #aeaeae;
+$border: #ebebea;
+
+.box-container {
+	min-height: 500px;
+	max-height: 500px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+.box-calls {
+	border: none;
+	border: 1px solid $border;
+	border-radius: 12px;
+	padding: 1rem;
+	margin: 0.5rem;
+	text-decoration: none;
+	&:hover {
+		
+		background: #e8e8e8;
+	}
+}
+.box-archive {
+	display: flex;
+	justify-content: flex-start;
+}
+.archive {
+	background: url('../../img/archive.svg');
+	background-repeat: no-repeat;
+	text-decoration: none;
+	padding: 2px 13px;
+}
+.call {
+	display: flex;
+	flex-direction: stretch;
+	padding: 0;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	span {
+		color: #444;
+	}
+}
+.calls-attempts {
+	@extend %calls-number;
+	padding: 3px 5px;
+}
+.answered-call {
+	background: url('../../img/call.svg');
+	background-repeat: no-repeat;
+	text-decoration: none;
+	padding: 13px;
+}
+.recived-call {
+	background: url('../../img/received-call.svg');
+	background-repeat: no-repeat;
+	text-decoration: none;
+	padding: 13px;
+}
+.missed-call {
+	background: url('../../img/missed-call.svg');
+	background-repeat: no-repeat;
+	text-decoration: none;
+	padding: 13px;
+}
+.numphone-text {
+	display: flex;
+	flex-direction: column;
+	span {
+		display: flex;
+		flex-direction: row;
+	}
+}
+
+.date-line {
+	p {
+		font-size: 11px;
+		font-weight: 700;
+		color: $text2;
+	}
+}
+.btn-in {
+	color: $color;
+	font-weight: 500;
+
+}
+.numphone {
+	color: $color;
+	font-weight: 500;
+
+}
+.tried-to-call {
+	margin: 0;
+	font-size: 12px;
+	font-weight: 500;
+	display: flex;
+	color: $text2;
+	span {
+		color: #b2b2b2;
+		margin-left: 2px;
+	}
+}
+
+.time {
+	font-size: 12px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	color: $text2;
+	font-weight: 500;
+	span {
+		margin-left: 3px;
+		font-size: 10px;
+		font-weight: 900;
+		padding: 2px;
+		background-color: #ffff;
+		color: $text2;
+		border-radius: 4px 0 0 4px;
+		border: 1px solid $border;
+	}
+}

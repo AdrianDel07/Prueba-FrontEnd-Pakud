@@ -1,0 +1,73 @@
+.footer {
+	border-radius: 0 0 7px 7px;
+	box-shadow: 1px 0 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.calls {
+	display: flex;
+	flex-direction: row;
+}
+
+.user {
+	background: url('../../img/user.svg');
+	background-repeat: no-repeat;
+	text-decoration: none;
+	padding: 12px;
+}
+.settings {
+	background: url('../../img/settings.svg');
+	background-repeat: no-repeat;
+	text-decoration: none;
+	padding: 12px;
+}
+.dialpad {
+	background: url('../../img/dialpad.svg');
+	background-repeat: no-repeat;
+	text-decoration: none;
+	padding: 20px !important;
+	position: relative;
+	-webkit-transform: translate(0px, -20px);
+	   -moz-transform: translate(0px, -20px);
+	    -ms-transform: translate(0px, -20px);
+	     -o-transform: translate(0px, -20px);
+	        transform: translate(0px, -20px);
+	&:hover {
+		padding: 22px !important;
+	}
+}
+.point {
+	background: url('../../img/point.svg');
+	background-repeat: no-repeat;
+	text-decoration: none;
+	padding: 12px;
+	padding-bottom: 0;
+}
+%calls-number {
+	background-color: red;
+	color: #ffffff;
+	border-radius: 50%;
+	padding: 2px 4px;
+	font-size: 10px;
+	font-weight: 900;
+}
+
+.calls-position {
+	@extend %calls-number;
+	position: absolute;
+	-webkit-transform: translate(10px, -3px);
+   	-moz-transform: translate(10px, -3px);
+    -ms-transform: translate(10px, -3px);
+     -o-transform: translate(10px, -3px);
+        transform: translate(10px, -3px);
+}
+
+.line {
+	border-bottom: 3px solid purple;
+}
+.pointer {
+	cursor: pointer;
+	transition: width 2s;
+	&:hover {
+		padding: 15px;
+	}
+}
