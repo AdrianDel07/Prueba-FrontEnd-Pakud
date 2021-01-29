@@ -19,7 +19,7 @@ function Footer() {
     return (
 		<div>
 			<ul className="footer">
-		        <li className="line">
+		        <li className="active-line">
                     <span className="calls">
                         <img src={call} alt="call" />
                         <p className="calls-number calls-position">{data.length}</p>

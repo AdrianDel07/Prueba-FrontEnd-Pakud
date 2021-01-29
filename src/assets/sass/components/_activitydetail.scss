@@ -16,6 +16,10 @@
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 30px 0 rgba(0, 0, 0, 0.19);
 
 }
+.text {
+	font-family: 'Acme';
+	color: #595959;
+}
 .from {
 	position: absolute;
 	bottom: 8px;
@@ -47,4 +51,11 @@
 	text-decoration: none;
 	padding: 13px;
 	margin-top: 10px;
+}
+.arch-btn{
+	position: absolute;
+	right: 5px;
+	top: 10px;
+	background: #ebebea;
+	padding: 5px;
 }

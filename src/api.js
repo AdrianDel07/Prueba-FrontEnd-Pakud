@@ -14,7 +14,14 @@ const getActivityID = (id) => {
 		.then(response => response.data);
 }
 
+// POST Archived Call Activity by ID
+const postArchivedCall = (id, data) => {
+	return axios.post(`${url}/${id}`, data)
+		.then(response => response.data);
+}
+
 export default {
 	getAllActivities,
-	getActivityID
+	getActivityID,
+	postArchivedCall
 };

@@ -23,12 +23,16 @@ $border: #ebebea;
 .box-archive {
 	display: flex;
 	justify-content: flex-start;
+	color: $color;
+	font-weight: 500;
+	font-size: 14px;
 }
 .archive {
 	background: url('../../img/archive.svg');
 	background-repeat: no-repeat;
 	text-decoration: none;
-	padding: 2px 13px;
+	padding: 5px 12px;
+	margin-right: 4px;
 }
 .call {
 	display: flex;
@@ -44,12 +48,13 @@ $border: #ebebea;
 .calls-attempts {
 	@extend %calls-number;
 	padding: 3px 5px;
+	margin-left: 5px;
 }
 .answered-call {
 	background: url('../../img/call.svg');
 	background-repeat: no-repeat;
 	text-decoration: none;
-	padding: 13px;
+	padding: 3px 13px;
 }
 .recived-call {
 	background: url('../../img/received-call.svg');
@@ -61,7 +66,7 @@ $border: #ebebea;
 	background: url('../../img/missed-call.svg');
 	background-repeat: no-repeat;
 	text-decoration: none;
-	padding: 13px;
+	padding: 0px 13px;
 }
 .numphone-text {
 	display: flex;
@@ -71,18 +76,17 @@ $border: #ebebea;
 		flex-direction: row;
 	}
 }
-
+.box-icons-calls {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 .date-line {
 	p {
 		font-size: 11px;
 		font-weight: 700;
 		color: $text2;
 	}
-}
-.btn-in {
-	color: $color;
-	font-weight: 500;
-
 }
 .numphone {
 	color: $color;

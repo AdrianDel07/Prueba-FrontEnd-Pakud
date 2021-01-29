@@ -4,13 +4,15 @@ import '../assets/sass/styles.scss';
 import { Link } from "react-router-dom";
 
 
-export default function ActivityFeed() {
+export default function ArchivedCalls() {
 	const[calls, setCalls] = useState([]);
+	const[archived, setArchived] = useState([]);
 
 	useEffect(() => {
 		getAllCalls();
 		getDate();
 		getTime();
+		setTimeout(archivedCalls, 1500);
 	},[])
 
 	const getAllCalls = async () => {
@@ -36,16 +38,20 @@ export default function ActivityFeed() {
 		return (time);
 	}
 
+	const archivedCalls = () => {
+		try {
+			let data = calls.filter(call => call.is_archived === true);
+			console.log(data);
+			setArchived(data);
+		}
+		catch (err) {
+			console.log(err);
+		}
+	}
+
 	return (
 		<div className="box-container">
-			<Link className="box-calls box-archive" to='/archived_Calls/'>
-				<div className="btn-in">
-					<span className="archive"></span>
-					Archive all calls
-				</div>
-			</Link>
-			
-			{ calls.map((call, index) => (
+			{ archived.map((call, index) => (
 				<div key={ index }>
 					<div className="date-line">
 						<p>{ getDate(call.created_at) }</p>

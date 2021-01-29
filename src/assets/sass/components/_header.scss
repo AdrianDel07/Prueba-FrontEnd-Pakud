@@ -8,9 +8,7 @@ $text2: #aeaeae;
 	li {
 		padding: 5px;
 		font-weight: 500;
-	}
-	.line-bottom {
-		border-bottom: 3px solid purple;
+		padding-bottom: 11px;
 	}
 }
 .box-curv {
@@ -32,6 +30,7 @@ $text2: #aeaeae;
 	.header-li {
 		padding-right: 20px;
 		color: $text2;
+		font-size: 14px;
 		&:hover {
 			background: #e8e8e8;
 		}
